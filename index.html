@@ -15,7 +15,7 @@
     <h2>Atividade de Ciências – 8º Ano – 3º Bimestre</h2>
   </div>
   <div class="info-row">
-    <div class="campo"><label for="turma">Turma</label><select id="turma"><option value="">Selecione</option><option value="8º Ano B">8º Ano B</option></select></div>
+    <div class="campo"><label for="turma">Turma</label><select id="turma"><option value="">Selecione</option><option value="8º Ano A">8º Ano A</option><option value="8º Ano B">8º Ano B</option></select></div>
     <div class="campo"><label for="nome">Nome do(a) estudante</label><select id="nome" onchange="carregarDadosAluno()"><option value="">Selecione a turma primeiro</option></select></div>
     <div class="campo"><label>RA</label><input id="ra" readonly placeholder="Será preenchido automaticamente"></div>
     <div class="campo"><label>E-mail</label><input id="email" readonly placeholder="Será preenchido automaticamente"></div>
@@ -26,7 +26,42 @@
   <div class="footer">A ordem das questões muda a cada acesso. O gabarito permanece associado à questão original. Imagens: NASA e NOAA; uso educacional e contextual.</div>
 </div>
 <script>
-const alunosPorTurma = {'8º Ano B': [
+const alunosPorTurma = {
+  '8º Ano A': [
+    {nome: 'ALICE CARDOSO DE ALCANTARA', ra: '115864684', dig: '7', email: '00001158646847SP@al.educacao.sp.gov.br'},
+    {nome: 'ANA LUIZA VALENCA PAIVA', ra: '113191292', dig: '5', email: '00001131912925SP@al.educacao.sp.gov.br'},
+    {nome: 'BRYAN DINIZ SILVA', ra: '115070919', dig: '4', email: '00001150709194SP@al.educacao.sp.gov.br'},
+    {nome: 'CARLOS EDUARDO MENEZES MACHADO', ra: '115074906', dig: '4', email: '00001150749064SP@al.educacao.sp.gov.br'},
+    {nome: 'EVANDRO CUTOLO TEIXEIRA', ra: '116503510', dig: '8', email: '00001165035108SP@al.educacao.sp.gov.br'},
+    {nome: 'GABRIELA SANTOS COSTA', ra: '115612597', dig: '2', email: '00001156125972SP@al.educacao.sp.gov.br'},
+    {nome: 'GUILHERME CARMO RODRIGUES', ra: '114143838', dig: '0', email: '00001141438380SP@al.educacao.sp.gov.br'},
+    {nome: 'GUSTAVO HENRIQUE DA SILVA', ra: '115073645', dig: '8', email: '00001150736458SP@al.educacao.sp.gov.br'},
+    {nome: 'ISAAC FERNANDES DE ANDRADE', ra: '115077031', dig: '4', email: '00001150770314SP@al.educacao.sp.gov.br'},
+    {nome: 'KELVIN DUARTE GONCALVES', ra: '123922922', dig: '7', email: '00001239229227SP@al.educacao.sp.gov.br'},
+    {nome: 'LAURA VITÓRIA ROCHA', ra: '115885097', dig: '9', email: '00001158850979SP@al.educacao.sp.gov.br'},
+    {nome: 'LETICIA CUSTÓDIO LIMA', ra: '113478815', dig: '0', email: '00001134788150SP@al.educacao.sp.gov.br'},
+    {nome: 'LUCAS EDUARDO DA SILVA SANTANA', ra: '116528728', dig: '6', email: '00001165287286SP@al.educacao.sp.gov.br'},
+    {nome: 'MATHEUS KAUÃ DOS SANTOS NASCIMENTO', ra: '116517361', dig: 'X', email: '0000116517361XSP@al.educacao.sp.gov.br'},
+    {nome: 'MAYARA CAETANO DE OLIVEIRA PINA', ra: '114156129', dig: '3', email: '00001141561293SP@al.educacao.sp.gov.br'},
+    {nome: 'MIGUEL LIMA DE MESQUITA', ra: '113987186', dig: '9', email: '00001139871869SP@al.educacao.sp.gov.br'},
+    {nome: 'NICOLAS ROCHA SILVA', ra: '114156895', dig: '0', email: '00001141568950SP@al.educacao.sp.gov.br'},
+    {nome: 'PAOLLA MICHELLINE DOS SANTOS MARQUES', ra: '114439186', dig: '6', email: '00001144391866SP@al.educacao.sp.gov.br'},
+    {nome: 'PEDRO HENRIQUE CORREA DE BRITO', ra: '114788668', dig: '4', email: '00001147886684SP@al.educacao.sp.gov.br'},
+    {nome: 'PEDRO LEONARDO DE ANDRADE MARQUES', ra: '114423093', dig: '7', email: '00001144230937SP@al.educacao.sp.gov.br'},
+    {nome: 'RAFAEL HENRIQUE SIQUEIRA BERNARDES ZIA', ra: '115889516', dig: '1', email: '00001158895161SP@al.educacao.sp.gov.br'},
+    {nome: 'RAPHAEL MATHIAS NUNES MIRANDA', ra: '115889692', dig: 'X', email: '0000115889692XSP@al.educacao.sp.gov.br'},
+    {nome: 'SAMUEL ALVES DA COSTA', ra: '120763264', dig: '8', email: '00001207632648SP@al.educacao.sp.gov.br'},
+    {nome: 'SOFIA AZEREDO CUBAS', ra: '121480006', dig: '3', email: '00001214800063SP@al.educacao.sp.gov.br'},
+    {nome: 'SOPHIA LACERDA ANDRADE', ra: '115070916', dig: '9', email: '00001150709169SP@al.educacao.sp.gov.br'},
+    {nome: 'THAYLLA DUANNY VENANCIO SCAQUITO', ra: '116521711', dig: '9', email: '00001165217119SP@al.educacao.sp.gov.br'},
+    {nome: 'THAYS RODRIGUES DA SILVA', ra: '115073651', dig: '3', email: '00001150736513SP@al.educacao.sp.gov.br'},
+    {nome: 'MANOELLA DOS ANJOS SANTOS', ra: '115051147', dig: '3', email: '00001150511473sp@al.educacao.sp.gov.br'},
+    {nome: 'MARIANA CHARRUA GAIA MION SILVA', ra: '115613059', dig: '1', email: '00001156130591sp@al.educacao.sp.gov.br'},
+    {nome: 'DIOGO DA SILVA VELOSO', ra: '115079900', dig: '6', email: '00001150799006SP@al.educacao.sp.gov.br'},
+    {nome: 'QUÉZIA DO ESPIRITO SANTO ROBERTI', ra: '113498275', dig: '6', email: '00001134982756sp@al.educacao.sp.gov.br'},
+    {nome: 'KEMILLYN ANDRADE DE SOUZA SILVA', ra: '115883793', dig: '8', email: '00001158837938SP@al.educacao.sp.gov.br'}
+  ],
+  '8º Ano B': [
     {nome: 'ANGELLO GABRIEL CUTOLO TEIXEIRA', ra: '116499732', dig: '4', email: '00001164997324SP@al.educacao.sp.gov.br'},
     {nome: 'ARTHUR HENRIQUE MARQUES ENDRES', ra: '115865878', dig: '3', email: '00001158658783SP@al.educacao.sp.gov.br'},
     {nome: 'BIANCA CRISTINA DA SILVA SANTOS', ra: '124702441', dig: '6', email: '00001247024416SP@al.educacao.sp.gov.br'},
@@ -59,7 +94,8 @@ const alunosPorTurma = {'8º Ano B': [
     {nome: 'SOPHIA FRANÇA DE CARVALHO', ra: '115890815', dig: '5', email: '00001158908155SP@al.educacao.sp.gov.br'},
     {nome: 'WALLIF LEANDRO DE JESUS LESSA', ra: '114163772', dig: '8', email: '00001141637728SP@al.educacao.sp.gov.br'},
     {nome: 'BERNARDO GONCALVES JANELLI', ra: '121007426', dig: '6', email: '00001210074266SP@al.educacao.sp.gov.br'}
-  ]};
+  ]
+};
 function carregarNomes(){const select=document.getElementById('nome');select.innerHTML='<option value="">Selecione seu nome</option>';(alunosPorTurma[document.getElementById('turma').value] || []).forEach(a=>{const o=document.createElement('option');o.value=a.nome;o.textContent=a.nome;select.appendChild(o)})}
 function carregarDadosAluno(){const aluno=(alunosPorTurma[document.getElementById('turma').value] || []).find(a=>a.nome===document.getElementById('nome').value);document.getElementById('ra').value=aluno?aluno.ra+'-'+aluno.dig:'';document.getElementById('email').value=aluno?aluno.email:''}
 document.getElementById('turma').addEventListener('change',carregarNomes);
